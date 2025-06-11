@@ -39,20 +39,20 @@ CELL_ID <- function(epsg, res, Y_LLC, X_LLC){
 #      a tibble with 3 variables in this order: X_LLC, GRD_ID, Y_LCC
 #
 grid_fields <- function(grid, epsg, res, gt){
-  fields <- sf::st_coordinates(grid) %>%
+  fields <- sf::st_coordinates(grid) |>
     tibble::as_tibble()
 
   if (gt == "SURF"){
-    fields <- fields %>%
-      dplyr::group_by(L2) %>%
-      dplyr::slice_head(n = 1) %>%
-      dplyr::ungroup() %>%
-      dplyr::select(X_LLC = X, Y_LLC = Y) %>%
+    fields <- fields |>
+      dplyr::group_by(L2) |>
+      dplyr::slice_head(n = 1) |>
+      dplyr::ungroup() |>
+      dplyr::select(X_LLC = X, Y_LLC = Y) |>
       dplyr::mutate(GRD_ID = CELL_ID(epsg, res, Y_LLC, X_LLC), .before = Y_LLC)
   } else {
-    fields <- fields %>%
-      dplyr::select(X_LLC = X, Y_LLC = Y) %>%
-      dplyr::mutate(X_LLC = X_LLC - res/2, Y_LLC = Y_LLC - res/2) %>%
+    fields <- fields |>
+      dplyr::select(X_LLC = X, Y_LLC = Y) |>
+      dplyr::mutate(X_LLC = X_LLC - res/2, Y_LLC = Y_LLC - res/2) |>
       dplyr::mutate(GRD_ID = CELL_ID(epsg, res, Y_LLC, X_LLC), .before = Y_LLC)
   }
 
@@ -77,8 +77,8 @@ grid_fields <- function(grid, epsg, res, gt){
 #
 full_extend <- function(xmin = 0, ymin = 0, xmax = 10100000, ymax = 10100000, epsg = 3035){
   bbox <- c(xmin = xmin, ymin = ymin, xmax = xmax, ymax = ymax)
-  sf::st_bbox(bbox, crs = sf::st_crs(paste0("EPSG:", epsg))) %>%
-    sf::st_as_sfc() %>%
+  sf::st_bbox(bbox, crs = sf::st_crs(paste0("EPSG:", epsg))) |>
+    sf::st_as_sfc() |>
     sf::st_sf()
 }
 

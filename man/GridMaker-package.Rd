@@ -7,6 +7,14 @@
 \description{
 GridMaker produces GIS grid datasets of various resolutions covering user-defined countries or regions. An R-translation of the Eurostat-GISCO GridMaker java utility.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/fgoerlich/GridMaker}
+  \item Report bugs at \url{https://github.com/fgoerlich/GridMaker/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Francisco J. Goerlich \email{Francisco.J.Goerlich@uv.es} (\href{https://orcid.org/0000-0003-1626-525X}{ORCID})
 

@@ -10,7 +10,7 @@
 GridMaker produces vector GIS grid datasets of various resolutions
 covering user-defined countries or regions.
 
-<img src="img/demo_ex.png" width="100%" />
+<img src="man/figures/demo_ex.png" width="100%" />
 
 It is just the translation to *R* of the [Eurostat
 GridMaker](https://github.com/eurostat/GridMaker) java utility that is

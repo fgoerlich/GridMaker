@@ -30,7 +30,7 @@ It is just the translation to _R_ of the [Eurostat GridMaker](https://github.com
 
 You can install the development version of GridMaker from [GitHub](https://github.com/) with:
 
-```{r instalation}
+``` r
 # install.packages("pak")
 pak::pak("fgoerlich/GridMaker")
 ```

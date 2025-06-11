@@ -83,7 +83,7 @@ GridMaker <- function(layer = NULL, res = 100000L, epsg = 3035, tol = 0L, gt = c
   }
   #   Converting to point grid if gt = "CPT"
   if(gt == "CPT")
-    grid <- st_centroid(grid)
+    grid <- sf::st_centroid(grid)
   #   Computing the fields
   fields <- grid_fields(grid, epsg, res, gt)
 

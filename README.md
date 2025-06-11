@@ -33,8 +33,21 @@ pak::pak("fgoerlich/GridMaker")
 This is a basic example which shows you how to use the function:
 
 ``` r
+library(ggplot2)
 library(GridMaker)
-GridMaker() |> sf::st_geometry() |> plot()
+region <- sf::st_read(system.file("extdata/test_grid_area.gpkg", package = "GridMaker"))
+#> Reading layer `test_grid_area' from data source 
+#>   `C:\Users\Francisco Goerlich\AppData\Local\Temp\RtmpqmYwnA\temp_libpath492069861955\GridMaker\extdata\test_grid_area.gpkg' 
+#>   using driver `GPKG'
+#> Simple feature collection with 1 feature and 1 field
+#> Geometry type: MULTIPOLYGON
+#> Dimension:     XY
+#> Bounding box:  xmin: 2501696 ymin: 3201167 xmax: 8852696 ymax: 7499548
+#> Projected CRS: ETRS89-extended / LAEA Europe
+grid <- GridMaker(region)
+ggplot() +
+  geom_sf(data = region, col = "blue") +
+  geom_sf(data = grid, fill = NA, col = "red")
 ```
 
 <img src="man/figures/README-example-1.png" width="100%" />

@@ -40,7 +40,12 @@ pak::pak("fgoerlich/GridMaker")
 This is a basic example which shows you how to use the function:
 
 ```{r example}
+library(ggplot2)
 library(GridMaker)
-GridMaker() |> sf::st_geometry() |> plot()
+region <- sf::st_read(system.file("extdata/test_grid_area.gpkg", package = "GridMaker"))
+grid <- GridMaker(region)
+ggplot() +
+  geom_sf(data = region, col = "blue") +
+  geom_sf(data = grid, fill = NA, col = "red")
 ```
 

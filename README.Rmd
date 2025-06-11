@@ -18,9 +18,9 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of GridMaker is to produce vector GIS grid datasets of various resolutions covering user-defined countries or regions.
+GridMaker produces vector GIS grid datasets of various resolutions covering user-defined countries or regions.
 
-```{r image}
+```{r image, echo = FALSE}
 knitr::include_graphics("img/demo_ex.png")
 ```
 
@@ -30,7 +30,7 @@ It is just the translation to _R_ of the [Eurostat GridMaker](https://github.com
 
 You can install the development version of GridMaker from [GitHub](https://github.com/) with:
 
-``` r
+```{r instalation}
 # install.packages("pak")
 pak::pak("fgoerlich/GridMaker")
 ```

@@ -11,6 +11,7 @@ GridMaker produces GIS grid datasets of various resolutions covering user-define
 Useful links:
 \itemize{
   \item \url{https://github.com/fgoerlich/GridMaker}
+  \item \url{https://fgoerlich.github.io/GridMaker/}
   \item Report bugs at \url{https://github.com/fgoerlich/GridMaker/issues}
 }
 

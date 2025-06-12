@@ -24,7 +24,7 @@ GridMaker produces vector GIS grid datasets of various resolutions covering user
 knitr::include_graphics("man/figures/demo_ex.png")
 ```
 
-It is just the translation to _R_ of the [Eurostat GridMaker](https://github.com/eurostat/GridMaker) java utility that is used by [Eurostat-GISCO](http://ec.europa.eu/eurostat/web/gisco) for the production of [gridded datasets](https://ec.europa.eu/eurostat/web/gisco/geodata/grids)
+It is just the translation to _R_ of the [Eurostat GridMaker](https://github.com/eurostat/GridMaker) java utility that is used by [Eurostat-GISCO](https://ec.europa.eu/eurostat/web/gisco) for the production of [gridded datasets](https://ec.europa.eu/eurostat/web/gisco/geodata/grids)
 
 ## Installation
 

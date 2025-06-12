@@ -14,8 +14,8 @@ covering user-defined countries or regions.
 
 It is just the translation to *R* of the [Eurostat
 GridMaker](https://github.com/eurostat/GridMaker) java utility that is
-used by [Eurostat-GISCO](http://ec.europa.eu/eurostat/web/gisco) for the
-production of [gridded
+used by [Eurostat-GISCO](https://ec.europa.eu/eurostat/web/gisco) for
+the production of [gridded
 datasets](https://ec.europa.eu/eurostat/web/gisco/geodata/grids)
 
 ## Installation
